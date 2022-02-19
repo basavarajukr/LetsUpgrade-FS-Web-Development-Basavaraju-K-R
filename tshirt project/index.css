@@ -1,0 +1,149 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* css for navigation */
+.header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  display: inline-block;
+  background-color: gray;
+  /* background-color: #a3e3d8; */
+}
+
+.logo {
+  height: 60px;
+  width: 10%;
+  /* background-color: yellow; */
+  margin-left: 10%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 40px;
+  text-align: center;
+  line-height: 60px;
+  font-family: calibri;
+  font-weight: bold;
+}
+
+.nav {
+  height: 60px;
+  width: 25%;
+  /* background-color: yellow; */
+  display: inline-block;
+  margin-left: 45%;
+}
+
+.nav > ul > li {
+  list-style-type: none;
+  display: inline-block;
+  /* background-color: lightgreen; */
+  height: 60px;
+  width: 32%;
+  text-align: center;
+  line-height: 60px;
+  font-family: segoe ui;
+}
+
+/* nav ends */
+
+/* banner starts */
+
+.banner {
+  display: inline-block;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+/* banner ends */
+
+/* products start */
+
+.products {
+  width: 100%;
+  margin-top: -4px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: lightgrey;
+}
+
+.products_area {
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* background-color: gray; */
+  margin-left: 10%;
+}
+
+.products_area > h1 {
+  font-family: segoe UI;
+  text-align: center;
+}
+
+.collection {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.product {
+  width: 25%;
+  margin-left: 6.2%;
+  display: inline-block;
+  margin-top: 60px;
+  border: 0.5px solid lightgrey;
+}
+
+.pro-img {
+  height: 250px;
+  /* width: 100%; */
+
+  overflow: hidden;
+}
+
+.pro-img > img {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.pro-img > img:hover {
+  transform: scale(1.5);
+}
+
+.pro-details {
+  /* background-color: yellow; */
+  font-family: Seoge UI;
+  padding: 10px;
+}
+
+.pro-details > h1,
+.pro-details > p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.buy {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  background-color: #233483;
+  color: white;
+}
+
+/* product ends */
+
+/* copyright start */
+
+.copyright {
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background-color: black;
+  color: white;
+}
+
+/* copyright end */
