@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .slider {
+            height: 600px;
+            width: 100%;
+            background-color: red;
+            overflow: hidden;
+        }
+
+        .slider_child{
+            width: 500%;
+            height: 600px;
+            /* overflow: hidden; */
+            background-color: green;
+            display: flex;
+            animation-name: slider-animation;
+            animation-play-state: running;
+            animation-timing-function: alternate;
+            animation-duration: 16s;
+            animation-iteration-count: 5;
+            animation-delay: 2s;
+        }
+
+        @keyframes slider-animation{
+            12.5%{
+                margin-left: -100%;
+            }
+
+            25%{
+                margin-left: -100%;
+            }
+
+            37.5%{
+                margin-left: -200%;
+            }
+
+            50%{
+                margin-left: -200%;
+            }
+
+            62.5%{
+                margin-left: -300%;
+            }
+
+            75%{
+                margin-left: -300%;
+            }
+
+            87.5%{
+                margin-left: -400%;
+            }
+
+            100%{
+                margin-left: -400%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="slider">
+        <div class="slider_child">
+            <img src="./slider-images/pexels-adi-kavazovic-3222272.jpg" width="20%" height="600px" alt="">
+            <img src="./slider-images/pexels-felix-mittermeier-957024.jpg" width="20%" height="600px" alt="">
+            <img src="./slider-images/pexels-michael-block-3225517.jpg" width="20%" height="600px" alt="">
+            <img src="./slider-images/pexels-skitterphoto-9198.jpg" width="20%" height="600px" alt="">
+            <img src="./slider-images/pexels-adi-kavazovic-3222272.jpg" width="20%" height="600px" alt="">
+        </div>
+    </div>
+
+</body>
+</html>
