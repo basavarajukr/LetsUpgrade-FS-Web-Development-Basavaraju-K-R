@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scores</title>
+    <link rel="icon" href="https://e7.pngegg.com/pngimages/346/688/png-clipart-test-computer-icons-quiz-miscellaneous-text.png">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: linear-gradient(to right, rgba(255,0,0,0), #93B5C6);
+
+        }
+
+        .container{
+            padding: 100px;
+        }
+
+        .container h2{
+            font-size: 50px;
+            text-align: center;
+            font-family: 'Segoe UI';
+            color: gray;
+        }
+
+        .rankbox{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        table{
+            width: 60%;
+            font-family: Verdana;
+            /* background-color: aqua; */
+        }
+
+        table,th,td{
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+        th{
+            padding: 10px;
+            background-color: #FFB830;
+        }
+
+        th,td{
+            text-align: center;
+            padding: 10px;
+        }
+
+        table > tbody > tr:nth-child(even) {
+            background-color: #3DB2FF;
+            color: white;
+        }
+
+        table > tbody > tr:nth-child(odd) {
+            background-color: #FFEDDA;
+        }
+
+        .rank {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .rank button {
+            padding: 0 40px;
+            border: 1px solid black;
+            border-radius: 10px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .rank button:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rank">
+            <h2>Your score</h2>
+            <button class="btn" id="display">Play again </button>
+        </div>
+        
+        <div class="rankbox">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        
+    
+                    </tr>
+                </thead>
+                <tbody id="data1">
+    
+                </tbody>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        
+                        <th>Score ( /10)</th>
+                        
+    
+                    </tr>
+                </thead>
+                <tbody id="data2">
+    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="./display.js"></script>
+</body>
+</html>

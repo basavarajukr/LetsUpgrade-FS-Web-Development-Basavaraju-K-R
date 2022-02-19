@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz app</title>
+    <link rel="icon" href="https://e7.pngegg.com/pngimages/346/688/png-clipart-test-computer-icons-quiz-miscellaneous-text.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-family: "Segoe UI";
+            }
+
+            a {
+            text-decoration: none;
+            color: black;
+            }
+
+            input {
+            padding: 15px 30px;
+            text-align: center;
+            outline: none;
+            border: 1px solid gray;
+            border-radius: 20px;
+            background-color: white;
+            color: white;
+            }
+
+            button {
+            padding: 15px 30px;
+            outline: none;
+            border: 1px solid gray;
+            border-radius: 20px;
+            margin-left: 20px;
+            background-color: #74b9ff;
+            text-transform: uppercase;
+            font-weight: 500;
+            
+            }
+
+            button:hover {
+                background-color: rgb(176, 176, 199);
+                cursor: pointer;
+            }
+
+            body {
+                background-image: linear-gradient(to left, rgba(255,0,0,0), #8FC1D4);
+
+            }
+
+            h1 {
+            font-size: 80px;
+            color: #082032;
+            text-align: center;
+            margin-top: 100px;
+            }
+
+            .padd {
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Quiz Of the day</h1>
+
+
+        <div class="padd">
+            <div class="enter">
+                <input type="text" placeholder="Enter your name" id="name">
+                <button id="second" type="submit" onclick="fullNames()">Start the quiz</button>
+            </div>
+        </div>
+    
+    </div>
+
+    
+    
+
+
+    <script>
+
+
+        let allNames = [];
+
+        if(localStorage.getItem('names')===null){
+            localStorage.setItem('names', JSON.stringify(allNames));
+        }
+        else{
+            allNames = JSON.parse(localStorage.getItem('names'));
+        };
+
+        const fullNames = () =>{
+ 
+
+    let namess = {};
+    namess.name = document.getElementById('name').value;
+
+    allNames.push(namess);
+
+     localStorage.setItem('names', JSON.stringify(allNames));
+
+     document.getElementById('name').value = "";
+
+
+}
+
+document.getElementById('second').onclick = function() {
+    location.href = "second.html";
+}
+
+
+    </script>
+</body>
+</html>
