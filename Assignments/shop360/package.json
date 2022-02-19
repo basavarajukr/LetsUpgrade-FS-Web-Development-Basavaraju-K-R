@@ -1,0 +1,16 @@
+{
+  "name": "shop360",
+  "version": "1.0.0",
+  "description": "this project is a backend api for shop360 admin panel",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Sharath",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.11"
+  }
+}

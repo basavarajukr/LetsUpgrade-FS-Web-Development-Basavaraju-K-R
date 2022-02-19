@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login page</title>
+</head>
+<body>
+
+    <div id="message"></div>
+    <form id="form" class="box" action="login.html" >
+
+        <h1>Login</h1>
+
+        <input type="text" placeholder="Enter Username" id="username">
+        <input type="password" placeholder="Enter your password" id="password">
+        <input class="btn" type="submit" value="Login">
+    </form>
+
+
+    <p>Don't have an account Click here to  
+    <a href="register.html">
+         Sign Up
+    </a>
+    </p>
+
+    <script>
+        var form = document.getElementById('form');
+
+        var error = []
+
+        form.addEventListener('submit' , function(e) {
+            e.preventDefault()
+            
+            var username = document.getElementById('username');
+            var password = document.getElementById('password');
+
+
+            if(username.value == ""){
+                username.className="wrong-input";
+                error.push('Enter the username');
+            }
+            if(password.value == ""){
+                error.push('Enter the password');
+            }
+
+            var message = document.getElementById('message');
+
+            message.innerText = error;
+        })
+
+
+    </script>
+</body>
+</html>

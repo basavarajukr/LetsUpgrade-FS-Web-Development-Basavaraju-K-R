@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image gallery</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .main{
+            height: 100vh;
+            width: 100%;
+            background-color: lightgray;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 33vh 33vh 33vh;
+        }
+
+        .gal_img{
+            height: 100%;
+            width: 100%;
+            background-color: yellow;
+            background-size: 100% 100%;
+            transition: 1s;
+        }
+
+        /* .gal_img:hover{
+            background-size: cover;
+        } */
+
+        .gal_img:nth-child(1){
+            background-image: url('./images/1.jpg');
+            
+        }
+
+        .gal_img:nth-child(2){
+            background-image: url('./images/2.jpg');
+            
+        }
+
+        .gal_img:nth-child(3){
+            background-image: url('./images/6.jpg');
+            background-position-y: center;
+            
+        }
+
+        .gal_img:nth-child(4){
+            /* background-color: black; */
+            grid-row: 2/4;
+            background-image: url('./images/7.jpeg');
+            
+        }
+
+        .gal_img:nth-child(5){
+            background-image: url('./images/3.jpg');
+            
+        }
+
+        .gal_img:nth-child(6){
+            background-image: url('./images/4.jpg');
+                       
+        }
+
+        .gal_img:nth-child(7){
+            background-image: url('./images/5.jpg');
+            
+        }
+
+        .gal_img:nth-child(8){
+            background-image: url('./images/1.jpg');
+            
+        }
+
+        .overlay{
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        .overlay:hover{
+            background-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="gal_img">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="gal_img">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="gal_img">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="gal_img">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="gal_img">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="gal_img">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="gal_img">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="gal_img">
+            <div class="overlay"></div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
