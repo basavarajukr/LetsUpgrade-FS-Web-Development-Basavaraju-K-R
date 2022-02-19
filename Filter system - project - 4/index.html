@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Data Filter System</title>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="data-parent">
+
+            <div class="filter-section">
+                <div class="inp-parent">
+                    <input type="text" id="name" placeholder="search name" onkeyup="filter(this.value, 'nameFilter')">
+                </div>
+
+                <div class="inp-parent">
+                    <input type="text" id="city" placeholder="search city" onkeyup="filter(this.value, 'cityFilter')">
+                </div>
+
+                <div class="inp-parent">
+                    <input type="text" id="role" placeholder="search role" onkeyup="filter(this.value, 'roleFilter')">
+                </div>
+
+                <div class="inp-parent">
+                    <select onchange="filter(this.value , 'genderFilter')" name="" id="gender">
+                        <option value="">All</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+
+                    </select>
+                </div>
+
+                <div class="inp-parent">
+                    <select name="" id="qualification" onchange="filter(this.value , 'qualificationFilter')">
+                        <option value="">All</option>
+                        <option value="Bachelors">Bachelors</option>
+                        <option value="Masters">Masters</option>
+                        <option value="Phd">PhD</option>
+
+                    </select>
+                </div>
+
+                <div class="inp-parent">
+                    <button onclick="clearFilter()">Clear Filter</button>
+                </div>
+            </div>
+
+
+        <h1>All users</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age
+                    <p>
+                    <span class="sorter" onclick="filter('asc' , 'ageFilter')">&darr;</span>
+                    <span class="sorter" onclick="filter('desc' , 'ageFilter')">&uarr;</span>
+                    <span class="sorter" onclick="filter('' , 'ageFilter')">&#10006;</span>
+                    </p>
+                </th>
+                <th>City</th>
+                <th>Gender</th>
+                <th>Qualification</th>
+                <th>Company Name</th>
+                <th>Role</th>
+                <th>Salary
+                    <p>
+                        <span class="sorter" onclick="filter('asc' , 'salaryFilter')">&darr;</span>
+                        <span class="sorter" onclick="filter('desc' , 'salaryFilter')">&uarr;</span>
+                        <span class="sorter" onclick="filter('' , 'salaryFilter')">&#10006;</span>
+                        </p>
+                </th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+
+        </div>
+    </div>
+    
+
+
+    <script src="./index.js"></script>
+</body>
+</html>

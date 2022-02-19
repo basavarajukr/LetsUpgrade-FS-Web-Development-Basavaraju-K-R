@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #first{
+            border: 2px solid gray;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <canvas id="first"></canvas>
+
+
+
+    <script>
+        let canvas= document.getElementById('first');
+        canvas.width=1200;
+        canvas.height=600;
+
+        let ctx = canvas.getContext('2d');
+
+        // ctx.fillRect(100,100,600,300)
+        // ctx.arc(100,100,50,Math.PI+1.5,Math.PI*2,false)
+        // ctx.stroke();
+
+        // ctx.beginPath();
+        // ctx.moveTo(0,0);
+        // ctx.lineTo(300,100);
+        // ctx.stroke();
+
+
+        // population data 
+
+        data=[
+            {
+                year:2000,
+                population:300
+            },
+            {
+                year:2001,
+                population:400
+            },
+            {
+                year:2002,
+                population:500
+            },
+            {
+                year:2003,
+                population:450
+            },
+            {
+                year:2004,
+                population:550
+            },
+            {
+                year: 2005,
+                population: 1000
+            }
+
+        ]
+
+        // creating y grids 
+        ctx.beginPath();
+        ctx.strokeStyle="lightgray";
+        let xValue = 50;
+        for(let i=0;i<(1200/50);i++){
+            ctx.moveTo(xValue,0);
+            ctx.lineTo(xValue,600);
+            xValue+=50;
+        }
+        ctx.stroke();
+
+        // creating x grids 
+
+        ctx.beginPath();
+        ctx.strokeStyle="lightgray";
+        let yValue = 50;
+        for(let i=0;i<(600/50);i++){
+            ctx.moveTo(0,yValue);
+            ctx.lineTo(1200,yValue);
+            yValue+=50;
+        }
+        ctx.stroke();
+
+        // creating axis
+        ctx.beginPath();
+        ctx.strokeStyle="black";
+        ctx.moveTo(50,50);
+        ctx.lineTo(50,550);
+        ctx.lineTo(1100,550);
+        ctx.stroke();
+
+        // drawing line graph
+        ctx.beginPath();
+        ctx.moveTo(50,550);
+        
+        let x = 150;
+        for(let i=0;i<data.length;i++){
+            let population = data[i].population;
+            let y = 550-Math.round(population/10);
+
+            ctx.lineTo(x,y);
+            x+=100;
+        }
+        ctx.stroke();
+
+        // creating arcs
+
+        ctx.beginPath();
+        ctx.strokeStyle="red";
+        ctx.fillStyle="red";
+        ctx.moveTo(50,550);
+        
+        let xArc = 150;
+        for(let i=0;i<data.length;i++){
+            let population = data[i].population;
+            let y = 550-Math.round(population/10);
+
+            ctx.moveTo(xArc,y)
+            ctx.arc(xArc,y,5,0,Math.PI*2,false);
+            xArc+=100;
+        }
+        ctx.fill();
+        ctx.stroke();
+
+        // creating text
+
+        ctx.beginPath();
+        ctx.strokeStyle="red";
+        ctx.fillStyle="red";
+        ctx.moveTo(50,550);
+        
+        let xText = 150;
+        for(let i=0;i<data.length;i++){
+            let population = data[i].population;
+            let y = 550-Math.round(population/10)-30;
+
+            ctx.moveTo(xText,y);
+            ctx.fillText(population,xText,y);
+            xText+=100;
+        }
+        ctx.fill();
+        ctx.stroke();
+
+        // creating text
+
+        ctx.beginPath();
+        ctx.strokeStyle="red";
+        ctx.fillStyle="red";
+        ctx.moveTo(50,550);
+        
+        let xYear = 150;
+        for(let i=0;i<data.length;i++){
+            let year = data[i].year;
+            let y = 570;
+
+            ctx.moveTo(xYear,y);
+            ctx.fillText(year,xYear,y);
+            xYear+=100;
+        }
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+</html>

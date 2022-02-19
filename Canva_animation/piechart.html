@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pie chart</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #canvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <canvas id="canvas"></canvas>
+
+
+    <script>
+
+        let canvas = document.getElementById('canvas');
+        canvas.height = 500;
+        canvas.width = 1000;
+
+        let ctx = canvas.getContext('2d');
+
+        let products = [
+        {
+            name: "Power bank",
+            unitSold: 12,
+            color : "green"
+        },
+        {
+            name: "Card holder",
+            unitSold: 23,
+            color: "blue"
+        },
+        {
+            name: "Power socket",
+            unitSold: 10,
+            color: "yellow"
+        },
+        {
+            name: "Diary",
+            unitSold: 34,
+            color: "orange"
+        },
+        {
+            name: "Cricket bat",
+            unitSold: 5,
+            color: "red"
+        },
+        ]
+
+
+
+        // Math.PI*2*countofproduct*totalcountofproducts                                       formula
+
+        let startAngle;
+        let endAngle;
+
+        for(let i=0 ; i<products.length;i++){
+
+            if(i===0){
+                startAngle = 0;
+            }
+            endAngle = (Math.PI*2*products[i].unitSold/84) + startAngle;
+
+            ctx.beginPath();
+            ctx.fillStyle = products[i].color;
+            ctx.moveTo(canvas.width/2,canvas.height/2);
+            ctx.arc(canvas.width/2,canvas.height/2,150,startAngle,endAngle,false);
+            ctx.closePath();
+            // ctx.stroke();
+            ctx.fill();
+
+            startAngle = endAngle;
+        }
+        
+
+        // creating text 
+
+        ctx.beginPath();
+        ctx.font = "15px calibri";
+        ctx.strokeStyle="red";
+        ctx.fillStyle = "black";
+        ctx.moveTo(canvas.width/2,canvas.height/2);
+
+        let x = 500;
+        let y = 130;
+        for(let i=0;i<products.length;i++){
+            ctx.moveTo(canvas.width/2,canvas.height/2);
+            ctx.fillText(products[i].unitSold,x,y);
+            x += 100;
+            y += 100;
+        }
+
+        ctx.fill();
+        ctx.stroke();
+
+
+        // donuts chart 
+
+
+        ctx.moveTo(canvas.width/2,canvas.height/2);
+        ctx.beginPath();
+        ctx.fillStyle="white";
+        ctx.arc(canvas.width/2,canvas.height/2,100,0,Math.PI*2,false);
+        ctx.fill();
+        // ctx.stroke();
+
+        
+
+
+    </script>
+</body>
+</html>
