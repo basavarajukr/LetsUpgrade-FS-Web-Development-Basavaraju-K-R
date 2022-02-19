@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 30px;
+  margin: auto;
+  font-family: "Segoe UI";
+}
+
+th,
+td {
+  padding: 15px 30px 15px 30px;
+}
+
+table,
+th,
+td {
+  border: 1px solid lightgray;
+  border-collapse: collapse;
+}
+
+button {
+  padding: 10px 30px 10px 30px;
+  cursor: pointer;
+}
+
+input {
+  height: 40px;
+  text-indent: 10px;
+  font-size: 18px;
+}
