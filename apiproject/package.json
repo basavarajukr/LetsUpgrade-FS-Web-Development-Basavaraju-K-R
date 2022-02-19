@@ -1,0 +1,12 @@
+{
+  "name": "apiproject",
+  "version": "1.0.0",
+  "description": "A product management system api / Product CRUD api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Basavaraj",
+  "license": "ISC"
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 2,
+    "name": "Table",
+    "price": 10000,
+    "type": "Electronics",
+    "rating": 4.9
+  },
+  {
+    "id": 4,
+    "name": "Galaxy S",
+    "price": 8900,
+    "type": "Electronics",
+    "rating": 3
+  },
+  {
+    "id": 5,
+    "name": "Galaxy S2",
+    "price": 7000,
+    "type": "Electronics",
+    "rating": 4
+  },
+
+  {
+    "id": 6,
+    "name": "Gal",
+    "price": 9000,
+    "type": "cloth",
+    "rating": 4.1
+  },
+  {
+    "id": 7,
+    "name": "Gamer",
+    "price": 9000,
+    "type": "Electronics",
+    "rating": 4.1
+  },
+  {
+    "id": 8,
+    "name": "Game",
+    "price": 9000,
+    "type": "Electronics",
+    "rating": 4.1
+  },
+  {
+    "name": "Gamers",
+    "price": 7900,
+    "type": "Electronics",
+    "rating": 4.1,
+    "id": 9
+  }
+]
